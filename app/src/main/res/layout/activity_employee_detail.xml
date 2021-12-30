@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EmployeeDetailActivity"
+    android:padding="@dimen/_5ssp"
+    android:layout_margin="@dimen/_6ssp">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray_light_transparent"
+        android:padding="@dimen/_5ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tview_total_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5ssp"
+            android:text="@string/total_hours_logged"
+            android:textSize="@dimen/_12ssp" />
+
+        <View
+            android:layout_width="@dimen/_1ssp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_light" />
+
+        <TextView
+            android:id="@+id/tview_days_present"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5ssp"
+            android:text="@string/days_present"
+            android:textColor="@color/teal_700"
+            android:textSize="@dimen/_12ssp" />
+
+        <View
+            android:layout_width="@dimen/_1ssp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_light" />
+
+        <TextView
+            android:id="@+id/tview_days_absent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5ssp"
+            android:text="@string/days_absent"
+            android:textColor="@color/maroon_light"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32ssp"
+        android:background="@color/gray_light_transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5ssp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5ssp"
+            android:text="@string/date_of_month"
+            android:textSize="@dimen/_12ssp" />
+
+        <View
+            android:layout_width="@dimen/_1ssp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5ssp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5ssp"
+            android:text="@string/no_of_hours_logged"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:background="@color/gray_light"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_8ssp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:listitem="@layout/layout_single_employee_detail" />
+
+    <TextView
+        android:id="@+id/tview_no_records"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_28ssp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/_5ssp"
+        android:text="@string/no_records_found"
+        android:textColor="@color/maroon_light"
+        android:textSize="@dimen/_18ssp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:indeterminateTint="?colorPrimary"
+        android:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

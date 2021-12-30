@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_light_transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tview_month_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/_5ssp"
+        android:hint="@string/date_of_month"
+        android:textSize="@dimen/_12ssp"
+        android:layout_margin="@dimen/_4ssp"/>
+
+    <View
+        android:layout_width="@dimen/_1ssp"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light" />
+
+    <TextView
+        android:id="@+id/tview_num_hours_logged"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/_5ssp"
+        android:hint="@string/no_of_hours_logged"
+        android:textSize="@dimen/_12ssp"
+        android:layout_margin="@dimen/_4ssp" />
+</LinearLayout>
